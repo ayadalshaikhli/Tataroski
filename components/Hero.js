@@ -72,7 +72,7 @@ function Green() {
         // cup.current.position.y = -2 * self.progress;
       },
     });
-    ScrollTrigger.refresh();
+    ScrollTrigger.clearScrollMemory();
   });
 
   return (
