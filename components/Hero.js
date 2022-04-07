@@ -48,8 +48,6 @@ function Green() {
     // cup.current.rotation.y = 6.2;
     cup.current.rotation.x = 6;
 
-    let o = { a: 0 };
-
     tl.from(
       "#mark",
       3,
@@ -60,23 +58,18 @@ function Green() {
       -2
     );
 
-    gsap.to(o, {
-      a: 1,
-      scrollTrigger: {
-        trigger: ".wrap",
-        markers: true,
-        scrub: 5,
-        // start: "top top",
-        // end: "bottom bottom",
-        start: "top top",
-        end: "bottom bottom",
-        onUpdate: (self) => {
-          cup.current.rotation.x = -1.5 * self.progress;
-          cup.current.rotation.y = -2 * Math.PI * self.progress;
-          // cup.current.rotation.z = -2 * Math.PI * self.progress;
-          // cup.current.position.y = -17 * self.progress;
-          // cup.current.position.y = -2 * self.progress;
-        },
+    ScrollTrigger.create({
+      trigger: ".wrap",
+      markers: true,
+      scrub: 5,
+      start: "top top",
+      end: "bottom bottom",
+      onUpdate: (self) => {
+        cup.current.rotation.x = -1.5 * self.progress;
+        cup.current.rotation.y = -2 * Math.PI * self.progress;
+        // cup.current.rotation.z = -2 * Math.PI * self.progress;
+        // cup.current.position.y = -17 * self.progress;
+        // cup.current.position.y = -2 * self.progress;
       },
     });
     ScrollTrigger.refresh();
