@@ -10,7 +10,6 @@ export default function ProductOptions({
   productInventory,
   selectedVariant,
 }) {
-  console.log({ images });
   return (
     <fieldset className="mt-3">
       <legend className="text-xl font-semibold">{name}</legend>
