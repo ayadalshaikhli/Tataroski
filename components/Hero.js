@@ -8,7 +8,9 @@ import { gsap, Expo } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+const tl = gsap.timeline({
+  defaults: { ease: "power1.out" },
+});
 
 const Lights = () => {
   return (
@@ -77,6 +79,7 @@ function Green() {
         },
       },
     });
+    ScrollTrigger.refresh();
   });
 
   return (
@@ -204,4 +207,5 @@ export default function Hero({ products }) {
     </>
   );
 }
+
 useGLTF.preload("/ringGreend.glb");

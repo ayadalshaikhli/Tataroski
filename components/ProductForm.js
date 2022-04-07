@@ -1,9 +1,9 @@
-import { useState, useEffect, useContext } from "react"
-import { formatter } from '../utils/helpers'
-import ProductOptions from "./ProductOptions"
-import { CartContext } from "../context/shopContext"
-import axios from "axios"
-import useSWR from 'swr'
+import { useState, useEffect, useContext } from "react";
+import { formatter } from "../utils/helpers";
+import ProductOptions from "./ProductOptions";
+import { CartContext } from "../context/shopContext";
+import axios from "axios";
+import useSWR from "swr";
 
 // setup inventory fetcher
 const fetchInventory = (url, id) =>
@@ -13,26 +13,25 @@ const fetchInventory = (url, id) =>
         id: id,
       },
     })
-    .then((res) => res.data)
+    .then((res) => res.data);
 
 export default function ProductForm({ product }) {
-
   const { data: productInventory } = useSWR(
-    ['/api/available', product.handle],
+    ["/api/available", product.handle],
     (url, id) => fetchInventory(url, id),
     { errorRetryCount: 3 }
-  )
+  );
 
-  const [available, setAvailable] = useState(true)
+  const [available, setAvailable] = useState(true);
 
-  const { addToCart } = useContext(CartContext)
+  const { addToCart } = useContext(CartContext);
 
-  const allVariantOptions = product.variants.edges?.map(variant => {
-    const allOptions = {}
+  const allVariantOptions = product.variants.edges?.map((variant) => {
+    const allOptions = {};
 
-    variant.node.selectedOptions.map(item => {
-      allOptions[item.name] = item.value
-    })
+    variant.node.selectedOptions.map((item) => {
+      allOptions[item.name] = item.value;
+    });
 
     return {
       id: variant.node.id,
@@ -42,93 +41,96 @@ export default function ProductForm({ product }) {
       options: allOptions,
       variantTitle: variant.node.title,
       variantPrice: variant.node.priceV2.amount,
-      variantQuantity: 1
-    }
-  })
+      variantQuantity: 1,
+    };
+  });
 
-  const defaultValues = {}
-  product.options.map(item => {
-    defaultValues[item.name] = item.values[0]
-  })
+  const defaultValues = {};
+  product.options.map((item) => {
+    defaultValues[item.name] = item.values[0];
+  });
 
-  const [selectedVariant, setSelectedVariant] = useState(allVariantOptions[0])
-  const [selectedOptions, setSelectedOptions] = useState(defaultValues)
+  const [selectedVariant, setSelectedVariant] = useState(allVariantOptions[0]);
+  const [selectedOptions, setSelectedOptions] = useState(defaultValues);
 
   function setOptions(name, value) {
-    setSelectedOptions(prevState => {
-      return { ...prevState, [name]: value }
-    })
+    setSelectedOptions((prevState) => {
+      return { ...prevState, [name]: value };
+    });
 
     const selection = {
       ...selectedOptions,
-      [name]: value
-    }
+      [name]: value,
+    };
 
-    allVariantOptions.map(item => {
+    allVariantOptions.map((item) => {
       if (JSON.stringify(item.options) === JSON.stringify(selection)) {
-        setSelectedVariant(item)
+        setSelectedVariant(item);
       }
-    })
+    });
   }
 
   useEffect(() => {
     if (productInventory) {
-      const checkAvailable = productInventory?.variants.edges.filter(item => item.node.id === selectedVariant.id)
+      const checkAvailable = productInventory?.variants.edges.filter(
+        (item) => item.node.id === selectedVariant.id
+      );
 
       if (checkAvailable[0].node.availableForSale) {
-        setAvailable(true)
+        setAvailable(true);
       } else {
-        setAvailable(false)
+        setAvailable(false);
       }
     }
-  }, [productInventory, selectedVariant])
-
+  }, [productInventory, selectedVariant]);
 
   useEffect(() => {
     if (productInventory) {
-      const checkAvailable = productInventory?.variants.edges.filter(item => item.node.id === selectedVariant.id)
+      const checkAvailable = productInventory?.variants.edges.filter(
+        (item) => item.node.id === selectedVariant.id
+      );
 
       if (checkAvailable[0].node.availableForSale) {
-        setAvailable(true)
+        setAvailable(true);
       } else {
-        setAvailable(false)
+        setAvailable(false);
       }
     }
-  }, [productInventory, selectedVariant])
-
-
+  }, [productInventory, selectedVariant]);
+  console.log(product.variants);
+  console.log(product.options);
   return (
-    <div className="rounded-2xl p-4 shadow-lg flex flex-col w-full md:w-1/3">
+    <div className="rounded-2xl p-4 shadow-lg flex flex-col w-full md:w-1/3 text-white ">
       <h2 className="text-2xl font-bold">{product.title}</h2>
-      <span className="pb-3">{formatter.format(product.variants.edges[0].node.priceV2.amount)}</span>
-      {
-        product.options.map(({ name, values }) => (
-          <ProductOptions
-            key={`key-${name}`}
-            name={name}
-            values={values}
-            selectedOptions={selectedOptions}
-            setOptions={setOptions}
-            selectedVariant={selectedVariant}
-            productInventory={productInventory}
-            available={available}
-          />
-        ))
-      }
-      {
-        available ?
-          <button
-            onClick={() => {
-              addToCart(selectedVariant)
-            }}
-            className="bg-black rounded-lg text-white px-2 py-3 mt-3 hover:bg-gray-800">Add To Card
-          </button> :
-          <button
-            className="rounded-lg text-white px-2 py-3 mt-3 bg-gray-800 cursor-not-allowed">
-              Sold out!
-          </button>
-      }
-
+      <span className="pb-3">
+        {formatter.format(product.variants.edges[0].node.priceV2.amount)}
+      </span>
+      {product.options.map(({ name, values }) => (
+        <ProductOptions
+          key={`key-${name}`}
+          name={name}
+          values={values}
+          selectedOptions={selectedOptions}
+          setOptions={setOptions}
+          selectedVariant={selectedVariant}
+          productInventory={productInventory}
+          available={available}
+        />
+      ))}
+      {available ? (
+        <button
+          onClick={() => {
+            addToCart(selectedVariant);
+          }}
+          className="bg-white rounded-lg text-black px-2 py-3 mt-3 hover:bg-gray-800"
+        >
+          Add To Card
+        </button>
+      ) : (
+        <button className="rounded-lg text-white px-2 py-3 mt-3 bg-gray-800 cursor-not-allowed">
+          Sold out!
+        </button>
+      )}
     </div>
-  )
+  );
 }
