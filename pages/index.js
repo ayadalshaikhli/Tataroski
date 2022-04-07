@@ -8,7 +8,7 @@ export default function Home({ products }) {
   return (
     <div style={{ backgroundColor: "#000" }} className="relative ">
       <Head>
-        <title>Modern eCommerce Course</title>
+        <title>Tataroski</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta
           httpEquiv="Content-Type"
@@ -16,9 +16,12 @@ export default function Home({ products }) {
         />
         <meta
           name="description"
-          content="Modern eCommerce Development Course focusing on Shopify, Next.js, TailwindCSS, GraphQL. Additional topics include Storefront API, Static Site Generation, getStaticPaths, getStaticProps and more."
+          content="STORY WHO WEARS WOW 3W is a newly established direct-to-consumer
+          fashion accessories brand, which means undefined fashion. We hope to
+          create the unique one for everyone. We love every passion and interest
+          on Earth because it is a reference to the UNIQUENESS of everything."
         />
-        <meta property="og:title" content="Modern eCommerce Course" />
+        <meta property="og:title" content="Tataroski" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.buildnextshop.com" />
         <meta
@@ -27,10 +30,13 @@ export default function Home({ products }) {
         />
         <meta
           property="og:description"
-          content="Modern eCommerce Development Course focusing on Shopify, Next.js, TailwindCSS, GraphQL. Additional topics include Storefront API, Static Site Generation, getStaticPaths, getStaticProps and more."
+          content="STORY WHO WEARS WOW 3W is a newly established direct-to-consumer
+          fashion accessories brand, which means undefined fashion. We hope to
+          create the unique one for everyone. We love every passion and interest
+          on Earth because it is a reference to the UNIQUENESS of everything."
         />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:site_name" content="Modern eCommerce Course" />
+        <meta property="og:site_name" content="Tataroski" />
       </Head>
       <div className="wrap">
         <Hero products={products} />
