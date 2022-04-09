@@ -4,7 +4,7 @@ import Nav from "./Nav";
 
 export default function Layout({ children }) {
   return (
-    <div className="flex flex-col justify-between min-h-full min-w-full ">
+    <div className="flex flex-col justify-between min-h-full min-w-full bg-black ">
       <Nav />
 
       <main>{children}</main>

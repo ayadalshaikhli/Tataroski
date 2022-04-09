@@ -60,7 +60,7 @@ function Green() {
 
     ScrollTrigger.create({
       trigger: ".wrap",
-      markers: true,
+
       scrub: 5,
       start: "top top",
       end: "bottom bottom",
@@ -72,9 +72,8 @@ function Green() {
         // cup.current.position.y = -2 * self.progress;
       },
     });
-    ScrollTrigger.clearScrollMemory();
   });
-
+  ScrollTrigger.clearScrollMemory();
   return (
     <>
       <group scale={30} position={[0, 102, 0]} dispose={null}>

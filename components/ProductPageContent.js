@@ -1,7 +1,7 @@
 import Image from "next/image";
 import ProductForm from "./ProductForm";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import SwiperCore, { Mousewheel, Pagination } from "swiper";
 import RecommendedList from "./RecommendedList";
 import ProductOptions from "./ProductOptions";
 import ProductReviews from "./ProductReviews";
@@ -22,7 +22,7 @@ export default function ProductPageContent({ product }) {
     );
   });
 
-  SwiperCore.use([Navigation, Pagination]);
+  SwiperCore.use([Mousewheel, Pagination]);
 
   return (
     <div className="bg-black">
@@ -34,9 +34,11 @@ export default function ProductPageContent({ product }) {
                 "--swiper-navigation-color": "#000",
                 "--swiper-pagination-color": "#000",
               }}
-              navigation
+              direction={"vertical"}
               pagination={{ clickable: true }}
-              className="h-96 rounded-2xl"
+              spaceBetween={30}
+              mousewheel={{ mousewheel: true }}
+              className="h-96 rounded-2xl "
               loop="true"
             >
               {images}

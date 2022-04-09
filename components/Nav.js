@@ -28,12 +28,12 @@ export default function Nav() {
         <div className="relative flex">
           <Link href="/info/about" passHref>
             <a className="cursor-pointer pl-12">
-              <span className="text-4xl pt-1  font-thin">About</span>
+              <span className="text-2xl pt-1  font-thin">About</span>
             </a>
           </Link>
           <Link href="/info/contact" passHref>
             <a className="cursor-pointer pl-12">
-              <span className="text-4xl pt-1  font-thin">Contact Us</span>
+              <span className="text-2xl pt-1  font-thin">Contact Us</span>
             </a>
           </Link>
           <a
