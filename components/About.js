@@ -3,13 +3,12 @@ import React from "react";
 function About() {
   return (
     <>
-      <h1></h1>
       <div>
-        <div className="shipping flex flex-col text-center bg-black text-white">
+        <div className="shipping flex flex-col text-center bg-black text-white h-screen">
           <div className="shipping__title p-10 text-lg font-bold">About US</div>
-          <div className="shipping__details  text-center justify-start flex flex-col ">
+          <div className="shipping__details  text-center justify-start flex flex-col  ">
             <div className="shipping__info  flex pb-3 ">
-              <p className="p-10 w-1/2">
+              <p className="p-10 w-auto">
                 STORY Tataroski is a newly established direct-to-consumer
                 fashion accessories brand, which means "undefined fashion". We
                 hope to create the "unique" one for everyone. We love every
@@ -18,7 +17,7 @@ function About() {
               </p>
             </div>
             <div className="shipping__info flex pb-3">
-              <p className="p-10 w-1/2">
+              <p className="p-10 w-auto">
                 Our mission is to design modern, timeless and durable products
                 that you can also afford. They can be mixed and matched and
                 there is never a shortage of jewellery to covet, collect and

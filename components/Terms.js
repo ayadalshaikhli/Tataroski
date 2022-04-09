@@ -3,7 +3,7 @@ import React from "react";
 function Terms() {
   return (
     <div>
-      <div className="shipping flex flex-col text-center ">
+      <div className="shipping flex flex-col text-center text-white h-screen">
         <div className="shipping__title p-10 text-lg font-bold">
           Terms Of Service
         </div>

@@ -3,7 +3,7 @@ import React from "react";
 function Refund() {
   return (
     <div>
-      <div className="shipping flex flex-col text-center ">
+      <div className="shipping flex flex-col text-center text-white">
         <div className="shipping__title p-10 text-lg font-bold">
           Returns and refunds
         </div>

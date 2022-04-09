@@ -2,7 +2,7 @@ import React from "react";
 
 function Privacy() {
   return (
-    <div className="shipping flex flex-col text-center ">
+    <div className="shipping flex flex-col text-center  text-white h-screen">
       <div className="shipping__title p-10 text-lg font-bold">
         Privacy policy
       </div>
@@ -10,7 +10,7 @@ function Privacy() {
         <div className="shipping__info flex pb-3">
           <h1 className="p-10 font-bold w-1/4">Privacy policy</h1>
           <p className="p-10 w-1/2">
-            TatoMaange is compliant with The General Data Protection Regulation
+            Tataroski is compliant with The General Data Protection Regulation
           </p>
         </div>
         <div className="shipping__info flex pb-3">
@@ -24,7 +24,7 @@ function Privacy() {
 
         <div className="shipping__info flex pb-3">
           <h1 className="p-10 font-bold w-1/4">
-            At www.tatomaange.com, we collect.
+            At www.tataroski.com, we collect.
           </h1>
           <div className="p-10 w-1/2">
             <ul className="pb-5">
@@ -86,7 +86,7 @@ function Privacy() {
         </div>
         <div className="shipping__info flex pb-3">
           <h1 className="p-10 font-bold w-1/4">
-            You can email us at supportyourbusinessemail.com and ask:
+            You can email us at tataroskijewelry@gmail.com and ask:
           </h1>
           <ul
             className="p-10 w-1/2"
@@ -95,7 +95,7 @@ function Privacy() {
             }}
           >
             <li>
-              To receive the copy of your personal details we have collected{" "}
+              To receive the copy of your personal details we have collected
             </li>
             <li>To delete your personal details from our system</li>
             <li>

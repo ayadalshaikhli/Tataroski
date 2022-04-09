@@ -3,7 +3,7 @@ import React from "react";
 function Shipping() {
   return (
     <div>
-      <div className="shipping flex flex-col text-center ">
+      <div className="shipping flex flex-col text-center text-white h-screen">
         <div className="shipping__title p-10 text-lg font-bold">
           Shipping & Delivery
         </div>

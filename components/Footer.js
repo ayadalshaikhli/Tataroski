@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className=" bg-black z-10">
-      <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <nav className="flex flex-wrap justify-center">
           <div className="px-6 py-2">
             <Link href="/info/about">
@@ -60,9 +60,7 @@ export default function Footer() {
             </div>
           ))} */}
         </nav>
-        <p className="mt-8 text-center text-gray-400">
-          &copy; 2021 Learn Shopify Next.js Course, All right reserved.
-        </p>
+        <p className="mt-8 text-center text-gray-400">&copy; 2022 Tataroski</p>
       </div>
     </footer>
   );
