@@ -148,7 +148,7 @@ const HTMLContent = ({ products }) => {
           <meshMatcapMaterial map={colorMap} attachArray="material" />
         </mesh> */}
 
-      {/* Hello */}
+      {/* Hellod */}
       <Green />
       {/* <Pink />
       <White /> */}
