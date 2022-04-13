@@ -49,7 +49,7 @@ function Green() {
     cup.current.rotation.x = 6;
 
     tl.from(
-      "#mark",
+      "#main-canvas",
       3,
       {
         y: 500,
@@ -185,7 +185,7 @@ export default function Hero({ products }) {
           height: "100%",
           position: "fixed",
         }}
-        id="mark"
+        id="main-canvas"
         linear
         colorManagment
         camera={{ position: [0, 380, 30], fov: 25, far: 500 }}
