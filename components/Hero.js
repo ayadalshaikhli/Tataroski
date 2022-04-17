@@ -47,7 +47,7 @@ function Green() {
   const cup = useRef();
   const moon = useRef();
   const mark = useRef();
-  const [hovered, set] = useState();
+  // const [hovered, set] = useState();
 
   // for demonstrating first eye is same as second eye
   // Output: false, true=
