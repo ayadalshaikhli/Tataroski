@@ -11,7 +11,7 @@ export default function ProductPage({ product }) {
   // console.log(realId)
 
   return (
-    <div className="min-h-screen py-12 sm:pt-20 bg-black">
+    <div className="min-h-screen py-12 sm:pt-20 bg-black colornav">
       <ProductPageContent product={product} />
     </div>
   );

@@ -142,6 +142,7 @@ function Green() {
             name="Headphones"
             geometry={nodes.Round007.geometry}
             material={materials["Ring Material.001"]}
+            material-color={"silver"}
             position={[-0.01, 1.49, 0]}
             scale={30.58}
           />
@@ -245,7 +246,6 @@ export default function Hero({ products }) {
           width: "100%",
           height: "100%",
           position: "fixed",
-          zIndex: "10",
         }}
         id="main-canvas"
         linear

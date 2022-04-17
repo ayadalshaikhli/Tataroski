@@ -8,6 +8,7 @@ const ProductCard = ({ product }) => {
   const { altText, originalSrc } = product.node.images.edges[0].node;
 
   const price = product.node.priceRange.minVariantPrice.amount;
+  const compare = product.node.compareAtPriceRange.minVariantPrice.amount;
 
   return (
     <Link href={`/products/${handle}`}>
@@ -22,8 +23,17 @@ const ProductCard = ({ product }) => {
             />
           </div>
         </div>
-        <h3 className="mt-4 text-lg font-medium text-gray-900">{title}</h3>
-        <p className="mt-1 text-sm text-gray-900">{formatter.format(price)}</p>
+        <h3 className="mt-4 text-lg font-medium text-gray-900 uppercase">
+          {title}
+        </h3>
+        <div className="flex ">
+          <p className="mt-1 pr-2 text-sm text-red-700 line-through">
+            {formatter.format(compare)}
+          </p>
+          <p className="mt-1 text-sm text-gray-900">
+            {formatter.format(price)}
+          </p>
+        </div>
       </a>
     </Link>
   );

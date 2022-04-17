@@ -43,24 +43,18 @@ export default function Nav() {
           <div>
             <Link href="/info/about" passHref>
               <a className="cursor-pointer">
-                <span className="text-lg pt-1 px-4 ">Rings</span>
+                <span className="text-lg pt-1 px-4  ">About</span>
               </a>
             </Link>
           </div>
           <div>
             <Link href="/info/contact" passHref>
               <a className="cursor-pointer ">
-                <span className="text-lg pt-1 px-4 ">Bracelets</span>
+                <span className="text-lg pt-1 px-4 ">Contact</span>
               </a>
             </Link>
           </div>
-          <div>
-            <Link href="/info/contact" passHref>
-              <a className="cursor-pointer ">
-                <span className="text-lg pt-1 px-4">Necklaces</span>
-              </a>
-            </Link>
-          </div>
+
           <MiniCart cart={cart} />
         </div>
       </div>
