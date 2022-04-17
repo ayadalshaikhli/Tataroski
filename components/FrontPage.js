@@ -12,7 +12,7 @@ export default function FrontPage() {
   });
 
   return (
-    <div style={{ height: "70vh" }} className="relative text-white s">
+    <div style={{ height: "70vh" }} className="relative text-white ">
       <div className="justify-center text-center">
         <div className="line pt-36 text-4xl font-mono">
           <span>Ignite Your Dreams</span>
