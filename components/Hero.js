@@ -71,10 +71,11 @@ function Green() {
     // cup.current.rotation.y = 6.2;
     cup.current.rotation.x = 6;
 
-    // tl.from(moon.current.position, 3, {
-    //   y: 300,
-    //   ease: Expo.easeInOut,
-    // });
+    tl.from(moon.current.position, 3, {
+      y: 300,
+      ease: Expo.easeInOut,
+    });
+
     // tl.from(
     //   moon.current.rotation,
     //   60,
