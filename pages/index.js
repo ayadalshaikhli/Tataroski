@@ -1,12 +1,13 @@
-import { getProductsInCollection } from "../lib/shopify";
 import ProductList from "../components/ProductList";
+import { getProductsInCollection } from "../lib/shopify";
+
 import Hero from "../components/Hero";
 import Head from "next/head";
 import FrontPage from "../components/FrontPage";
 
 export default function Home({ products }) {
   return (
-    <div style={{ backgroundColor: "#000" }} className="relative ">
+    <div style={{ backgroundColor: "#000" }} className="relative body">
       <Head>
         <title>Tataroski</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -52,6 +53,7 @@ export async function getStaticProps() {
   const products = await getProductsInCollection();
 
   return {
-    props: { products }, // will be passed to the page component as props
+    props: { products },
+    // will be passed to the page component as props
   };
 }

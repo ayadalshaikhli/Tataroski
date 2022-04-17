@@ -1,13 +1,18 @@
 import { Canvas, useLoader, useFrame } from "@react-three/fiber";
 import React, { Suspense, useRef, useState, useEffect } from "react";
-import { Html, PerspectiveCamera, useGLTF } from "@react-three/drei";
+import {
+  Environment,
+  Html,
+  PerspectiveCamera,
+  useGLTF,
+} from "@react-three/drei";
 import { Section } from "./section";
-
+import * as THREE from "three";
 import { proxy, useSnapshot } from "valtio";
 import { gsap, Expo } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-
+const color = new THREE.Color();
 const tl = gsap.timeline({
   defaults: { ease: "power1.out" },
 });
@@ -40,23 +45,65 @@ const Lights = () => {
 function Green() {
   const { nodes, materials } = useGLTF("/ringGreenddd.glb");
   const cup = useRef();
+  const moon = useRef();
+  const mark = useRef();
+  const [hovered, set] = useState();
 
   // for demonstrating first eye is same as second eye
   // Output: false, true=
+  // useEffect(() => {
+  //   if (hovered)
+  //     moon.current.getObjectByName(hovered).material.color.set("white");
+  //   document.body.style.cursor = hovered ? "pointer" : "auto";
+  // }, [hovered]);
+  // useFrame((state) => {
+  //   moon.current.children[0].children.forEach((child, index) => {
+  //     child.material.color.lerp(
+  //       color
+  //         .set(hovered === child.name ? "gold" : "white")
+  //         .convertSRGBToLinear(),
+  //       hovered ? 0.1 : 0.05
+  //     );
+  //   });
+  // });
 
   useEffect((state) => {
     // cup.current.rotation.y = 6.2;
     cup.current.rotation.x = 6;
 
-    tl.from(
-      "#main-canvas",
-      3,
-      {
-        y: 500,
-        ease: Expo.easeInOut,
+    // tl.from(moon.current.position, 3, {
+    //   y: 300,
+    //   ease: Expo.easeInOut,
+    // });
+    // tl.from(
+    //   moon.current.rotation,
+    //   60,
+    //   {
+    //     y: 7.26573,
+    //     ease: "none",
+    //     repeat: -1,
+    //   },
+    //   -3
+    // );
+    ScrollTrigger.create({
+      trigger: ".product-list",
+      start: "top 50%",
+      end: "bottom 0%",
+
+      onEnter: () => {
+        gsap.to(".body", {
+          duration: 1.0,
+          backgroundColor: "#fff",
+        });
       },
-      -2
-    );
+
+      onLeaveBack: () => {
+        gsap.to(".body", {
+          duration: 1.0,
+          backgroundColor: "#000",
+        });
+      },
+    });
 
     ScrollTrigger.create({
       trigger: ".wrap",
@@ -76,20 +123,32 @@ function Green() {
   ScrollTrigger.clearScrollMemory();
   return (
     <>
-      <group scale={30} position={[0, 102, 0]} dispose={null}>
+      <group
+        ref={moon}
+        rotation={[0, 0, 0]}
+        scale={30}
+        position={[0, 150, 0]}
+        dispose={null}
+      >
         {/* <primitive object={firstGltf.scene} position={[0, 185, 0]} /> */}
-        <group ref={cup} position={[0, 5, 0]} rotation={[250, 0, 0]}>
+        <group
+          ref={cup}
+          position={[0, 0, 0]}
+          // onPointerOver={(e) => (e.stopPropagation(), set(e.object.name))}
+          // onPointerOut={(e) => (e.stopPropagation(), set(null))}
+        >
           <mesh
+            ref={mark}
+            name="Headphones"
             geometry={nodes.Round007.geometry}
             material={materials["Ring Material.001"]}
-            material-color={"#F9C37A"}
             position={[-0.01, 1.49, 0]}
             scale={30.58}
           />
           <mesh
             geometry={nodes.Round.geometry}
             material={materials["Diamond.001"]}
-            material-color={"#007E3C"}
+            material-color={"#118D23"}
             // #5B8D32
             position={[-0.01, 2.38, 0]}
             scale={[3.64, 3.63, 3.64]}
@@ -186,6 +245,7 @@ export default function Hero({ products }) {
           width: "100%",
           height: "100%",
           position: "fixed",
+          zIndex: "10",
         }}
         id="main-canvas"
         linear

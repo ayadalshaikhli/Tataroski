@@ -3,6 +3,7 @@ import {
   getAllProducts,
   getProduct,
   recursiveCatalog,
+  getAllCollections,
 } from "../../lib/shopify";
 
 export default function ProductPage({ product }) {
