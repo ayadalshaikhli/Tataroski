@@ -39,7 +39,7 @@ export default function FrontPage() {
   }, []);
 
   return (
-    <div style={{ height: "70vh" }} className="relative text-white  ">
+    <div style={{ height: "70vh" }} className="relative text-white">
       <h1 className="text-center text-xl">5 YEAR ANNIVERSARY SALE</h1>
       <div className="flex relative justify-center text-center ">
         <div className="flex pt-10   uppercase text-gray-900 sm:opacity-50 text-7xl sm:text-9xl">
