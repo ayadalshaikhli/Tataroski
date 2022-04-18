@@ -42,7 +42,7 @@ export default function FrontPage() {
     <div style={{ height: "70vh" }} className="relative text-white  ">
       <h1 className="text-center text-xl">5 YEAR ANNIVERSARY SALE</h1>
       <div className="flex relative justify-center text-center ">
-        <div className="flex fixed  uppercase text-gray-900 opacity-50 text-7xl sm:text-9xl">
+        <div className="flex pt-10   uppercase text-gray-900 sm:opacity-50 text-7xl sm:text-9xl">
           <div className="timer-segment flex-col flex text-center ">
             <span className="time  ">{days}</span>
             <span className="label text-xl sm:text-5xl">Days</span>
@@ -65,7 +65,7 @@ export default function FrontPage() {
         </div>
       </div>
       <div className="justify-center text-center z-10 my-10 line">
-        <div className=" pt-36 text-4xl font-mono ">
+        <div className=" sm:pt-26 text-4xl font-mono ">
           <span>Ignite Your Dreams</span>
         </div>
         <div className=" font-mono py-5 text-xl">
