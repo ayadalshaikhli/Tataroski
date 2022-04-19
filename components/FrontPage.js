@@ -10,7 +10,7 @@ export default function FrontPage() {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    const target = new Date("04/18/2022 23:59:59");
+    const target = new Date("04/25/2022 23:59:59");
 
     const interval = setInterval(() => {
       const now = new Date();
