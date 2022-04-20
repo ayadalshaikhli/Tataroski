@@ -191,7 +191,7 @@ export default function contect() {
           <br /> We have temporarily closed our phone lines to speed up email
           response times. <br /> We thank you for your patience and
           understanding during this time and apologize for any inconvenience.
-          <br /> Please contact us at tataroski@gmail.com with us.
+          <br /> Please contact us at tataroskijewelry@gmail.com with us.
           <br /> Kindly provide as much information as you can for our team to
           assist you better.
         </div>
