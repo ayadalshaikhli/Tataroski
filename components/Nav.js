@@ -16,10 +16,10 @@ export default function Nav() {
     cartTotal += item?.variantPrice * item?.variantQuantity;
   });
 
-  if (cartTotal >= 25) {
+  if (cartTotal >= 35) {
     var Good = "Congratulations! We pay shipping!";
   } else {
-    var shippingaway = Math.round(25 - cartTotal);
+    var shippingaway = Math.round(35 - cartTotal);
     var free = "You're only" + " $" + shippingaway + " from free shipping";
   }
 
