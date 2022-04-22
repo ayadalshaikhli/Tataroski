@@ -1,11 +1,19 @@
 import ProductList from "../components/ProductList";
-import { getProductsInCollection } from "../lib/shopify";
+import {
+  getProductsEarringsCollection,
+  getProductsInCollection,
+  getProductsNecklacesCollection,
+  getProductsRingCollection,
+} from "../lib/shopify";
 
 import Hero from "../components/Hero";
 import Head from "next/head";
 import FrontPage from "../components/FrontPage";
+import FirstCollectionList from "../components/firstcollection/FirstCollectionList";
+import SecoundCollectionList from "../components/secoundcollection/SecoundCollectionList";
+import ThirdCollectionList from "../components/thirdcollection/ThirdCollectionList";
 
-export default function Home({ products }) {
+export default function Home({ products, rings, earrings, necklaces }) {
   return (
     <div style={{ backgroundColor: "#000" }} className="relative body">
       <Head>
@@ -42,8 +50,10 @@ export default function Home({ products }) {
       <div className="wrap">
         <Hero products={products} />
         <FrontPage />
-
         <ProductList products={products} />
+        <SecoundCollectionList earrings={earrings} />
+        <ThirdCollectionList necklaces={necklaces} />
+        <FirstCollectionList rings={rings} />
       </div>
     </div>
   );
@@ -51,9 +61,12 @@ export default function Home({ products }) {
 
 export async function getStaticProps() {
   const products = await getProductsInCollection();
+  const rings = await getProductsRingCollection();
+  const earrings = await getProductsEarringsCollection();
+  const necklaces = await getProductsNecklacesCollection();
 
   return {
-    props: { products },
+    props: { products, rings, earrings, necklaces },
     // will be passed to the page component as props
   };
 }
