@@ -106,17 +106,13 @@ export default function ProductForm({ product }) {
       }
     }
   }, [productInventory, selectedVariant]);
-  console.log(product.variants);
-  console.log("_+++");
-  console.log(product.options);
-  console.log("_+++");
+
   const price = product.variants.edges[0].node.priceV2.amount;
   const compare = product.variants.edges[0].node.compareAtPriceV2.amount;
   const priceSaving = compare - price;
   const saving = ((compare - price) / compare) * 100;
   const roundv2 = Math.round(saving);
 
-  console.log(saving);
   return (
     <div className="rounded-2xl p-4 shadow-lg flex flex-col w-full md:w-1/3 bg-white text-black ">
       <div className="text-sm font-thin flex align-bottom">

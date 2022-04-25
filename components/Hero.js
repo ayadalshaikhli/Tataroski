@@ -263,4 +263,4 @@ export default function Hero({ products }) {
   );
 }
 
-useGLTF.preload("/ringGreend.glb");
+useGLTF.preload("/ringGreenddd.glb");

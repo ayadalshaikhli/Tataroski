@@ -7,7 +7,7 @@ import ShopProvider from "../context/shopContext";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Script from "next/script";
-import * as ga from "../lib/google-analytics/";
+import * as ga from "../lib/google-analytics";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
