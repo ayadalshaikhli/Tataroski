@@ -114,7 +114,7 @@ export default function ProductForm({ product }) {
   const roundv2 = Math.round(saving);
 
   return (
-    <div className="rounded-2xl p-4 shadow-lg flex flex-col w-full md:w-1/3 bg-white text-black ">
+    <div className="rounded-2xl p-4 shadow-lg flex flex-col w-full md:w-1/3 bg-white text-black  z-40">
       <div className="text-sm font-thin flex align-bottom">
         {round} sales |
         <div className="flex align-bottom pt-1 pl-2=">

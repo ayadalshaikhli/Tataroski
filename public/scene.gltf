@@ -1,0 +1,403 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1453,
+      "max": [
+        0.020611494779586792,
+        0.020242836326360703,
+        0.004618396982550621
+      ],
+      "min": [
+        -0.02193104475736618,
+        -0.02224278636276722,
+        0.0006677370984107256
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 17436,
+      "componentType": 5126,
+      "count": 1453,
+      "max": [
+        0.999578058719635,
+        0.9995784163475037,
+        1.0
+      ],
+      "min": [
+        -0.9995781183242798,
+        -0.9995690584182739,
+        -0.004312269855290651
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1453,
+      "max": [
+        0.0,
+        0.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 6585,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 34872,
+      "componentType": 5126,
+      "count": 16868,
+      "max": [
+        0.11271683871746063,
+        0.05119745433330536,
+        0.003386029275134206
+      ],
+      "min": [
+        -0.11263623833656311,
+        -0.050742365419864655,
+        -0.00290012382902205
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 237288,
+      "componentType": 5126,
+      "count": 16868,
+      "max": [
+        0.9999904036521912,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.9999904036521912,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 11624,
+      "componentType": 5126,
+      "count": 16868,
+      "max": [
+        0.9992945194244385,
+        0.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 26340,
+      "componentType": 5125,
+      "count": 48885,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 439704,
+      "componentType": 5126,
+      "count": 417,
+      "max": [
+        0.023372480645775795,
+        0.02299613319337368,
+        0.009499425999820232
+      ],
+      "min": [
+        -0.024795496836304665,
+        -0.02517184428870678,
+        0.0014619024004787207
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 444708,
+      "componentType": 5126,
+      "count": 417,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -0.011570692993700504
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 146568,
+      "componentType": 5126,
+      "count": 417,
+      "max": [
+        0.0,
+        0.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 221880,
+      "componentType": 5125,
+      "count": 1113,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "3d-Art (https://sketchfab.com/3d-Art)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/diamond-jewelry-d6387b0dd7044cf1a762e9e26237ea88",
+      "title": "Diamond Jewelry"
+    },
+    "generator": "Sketchfab-12.68.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 226332,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 149904,
+      "byteOffset": 226332,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 449712,
+      "byteOffset": 376236,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 825948,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Material_03",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0444546,
+          0.0444546,
+          0.0444546,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.9882384183767148
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Material_01",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0110876,
+          0.0110876,
+          0.0110876,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.99667372
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Material_02_Diamond",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0,
+          0.38521,
+          0.438544,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.90785047936
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Diamond Jewelry_Material_03_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Diamond Jewelry_Material_01_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Diamond Jewelry_Material_02_Diamond_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 9,
+            "POSITION": 8,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Diamond Jewelry.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        5,
+        6
+      ],
+      "matrix": [
+        9.805030822753906,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        9.997913360595692,
+        4.3702267296216366e-07,
+        0.0,
+        0.0,
+        -4.2859150945682946e-07,
+        9.805030822753896,
+        0.0,
+        -0.00015533034456893802,
+        -0.0007478459156118333,
+        0.025624822825193405,
+        1.0
+      ],
+      "name": "Diamond Jewelry"
+    },
+    {
+      "mesh": 0,
+      "name": "Diamond Jewelry_Material_03_0"
+    },
+    {
+      "mesh": 1,
+      "name": "Diamond Jewelry_Material_01_0"
+    },
+    {
+      "mesh": 2,
+      "name": "Diamond Jewelry_Material_02_Diamond_0"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}

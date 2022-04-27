@@ -11,7 +11,7 @@ export default function ProductOptions({
   selectedVariant,
 }) {
   return (
-    <fieldset className="mt-3">
+    <fieldset className="mt-3 z-50">
       <legend className="text-xl font-semibold">{name}</legend>
       <div className="inline-flex items-center flex-wrap">
         {values.map((value) => {

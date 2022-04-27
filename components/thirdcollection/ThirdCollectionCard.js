@@ -13,7 +13,7 @@ const ThirdCollectionCard = ({ necklace }) => {
   return (
     <Link href={`/products/${handle}`}>
       <a className="group pb-8">
-        <div className="w-full bg-gray-900 rounded-2xl overflow-hidden">
+        <div className="w-full bg-gray-900 rounded-t-2xl overflow-hidden">
           <div className="relative group-hover:opacity-75 h-56">
             <Image
               src={originalSrc}
@@ -23,16 +23,18 @@ const ThirdCollectionCard = ({ necklace }) => {
             />
           </div>
         </div>
-        <h3 className="mt-4 text-lg font-medium text-gray-900 uppercase">
-          {title}
-        </h3>
-        <div className="flex ">
-          <p className="mt-1 pr-2 text-sm text-red-700 line-through">
-            {formatter.format(compare)}
-          </p>
-          <p className="mt-1 text-sm text-gray-900">
-            {formatter.format(price)}
-          </p>
+        <div className="bg-white p-2 rounded-b-2xl">
+          <h3 className="mt-4 text-lg font-medium text-gray-900 uppercase">
+            {title}
+          </h3>
+          <div className="flex ">
+            <p className="mt-1 pr-2 text-sm text-red-700 line-through">
+              {formatter.format(compare)}
+            </p>
+            <p className="mt-1 text-sm text-gray-900">
+              {formatter.format(price)}
+            </p>
+          </div>
         </div>
       </a>
     </Link>

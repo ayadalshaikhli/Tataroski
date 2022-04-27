@@ -46,6 +46,12 @@ export default function Home({ products, rings, earrings, necklaces }) {
         />
         <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content="Tataroski" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <div className="wrap">
         <Hero products={products} />

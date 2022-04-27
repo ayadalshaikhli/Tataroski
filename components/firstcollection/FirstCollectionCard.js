@@ -23,16 +23,18 @@ const FirstCollectionCard = ({ ring }) => {
             />
           </div>
         </div>
-        <h3 className="mt-4 text-lg font-medium text-gray-900 uppercase">
-          {title}
-        </h3>
-        <div className="flex ">
-          <p className="mt-1 pr-2 text-sm text-red-700 line-through">
-            {formatter.format(compare)}
-          </p>
-          <p className="mt-1 text-sm text-gray-900">
-            {formatter.format(price)}
-          </p>
+        <div className="bg-white p-2 rounded-md">
+          <h3 className="mt-4 text-lg font-medium text-gray-900 uppercase">
+            {title}
+          </h3>
+          <div className="flex ">
+            <p className="mt-1 pr-2 text-sm text-red-700 line-through">
+              {formatter.format(compare)}
+            </p>
+            <p className="mt-1 text-sm text-gray-900">
+              {formatter.format(price)}
+            </p>
+          </div>
         </div>
       </a>
     </Link>

@@ -47,6 +47,7 @@ function Green() {
   const cup = useRef();
   const moon = useRef();
   const mark = useRef();
+  const cam = useRef();
   // const [hovered, set] = useState();
 
   // for demonstrating first eye is same as second eye
@@ -69,12 +70,12 @@ function Green() {
 
   useEffect((state) => {
     // cup.current.rotation.y = 6.2;
-    cup.current.rotation.x = 6;
+    // cup.current.rotation.x = 6;
 
-    tl.from(moon.current.position, 3, {
-      y: 300,
-      ease: Expo.easeInOut,
-    });
+    // tl.from(moon.current.position, 3, {
+    //   y: 300,
+    //   ease: Expo.easeInOut,
+    // });
 
     // tl.from(
     //   moon.current.rotation,
@@ -113,8 +114,9 @@ function Green() {
       start: "top top",
       end: "bottom bottom",
       onUpdate: (self) => {
-        cup.current.rotation.x = -1.5 * self.progress;
-        cup.current.rotation.y = -2 * Math.PI * self.progress;
+        cup.current.rotation.x = 0.6 * self.progress;
+        cam.current.position.z = -11.6 * self.progress;
+        cup.current.rotation.y = 2 * Math.PI * self.progress;
         // cup.current.rotation.z = -2 * Math.PI * self.progress;
         // cup.current.position.y = -17 * self.progress;
         // cup.current.position.y = -2 * self.progress;
@@ -126,15 +128,15 @@ function Green() {
     <>
       <group
         ref={moon}
-        rotation={[0, 0, 0]}
-        scale={30}
-        position={[0, 150, 0]}
+        rotation={[1, 0, 0]}
+        scale={2.2}
+        position={[0, 0, 0]}
         dispose={null}
       >
         {/* <primitive object={firstGltf.scene} position={[0, 185, 0]} /> */}
         <group
           ref={cup}
-          position={[0, 0, 0]}
+          position={[0, 0.5, 0]}
           // onPointerOver={(e) => (e.stopPropagation(), set(e.object.name))}
           // onPointerOut={(e) => (e.stopPropagation(), set(null))}
         >
@@ -143,19 +145,35 @@ function Green() {
             name="Headphones"
             geometry={nodes.Round007.geometry}
             material={materials["Ring Material.001"]}
-            material-color={"silver"}
+            material-color={"#C0C0C0"}
             position={[-0.01, 1.49, 0]}
             scale={30.58}
           />
           <mesh
             geometry={nodes.Round.geometry}
             material={materials["Diamond.001"]}
-            material-color={"#118D23"}
+            material-color={"#024369"}
             // #5B8D32
             position={[-0.01, 2.38, 0]}
             scale={[3.64, 3.63, 3.64]}
           />
         </group>
+      </group>
+      <group ref={cam} name="Camera" position={[0, 0, 0]} rotation={[0, 0, 0]}>
+        <PerspectiveCamera makeDefault fov={50} position={[0, 1, 0]}>
+          <directionalLight
+            castShadow
+            position={[300, 130, 15]}
+            shadow-camera-right={8}
+            shadow-camera-top={8}
+            shadow-camera-left={-8}
+            shadow-camera-bottom={-8}
+            shadow-mapSize-width={1024}
+            shadow-mapSize-height={1024}
+            intensity={0.5}
+            shadow-bias={-0.0001}
+          />
+        </PerspectiveCamera>
       </group>
     </>
   );
@@ -251,7 +269,7 @@ export default function Hero({ products }) {
         id="main-canvas"
         linear
         colorManagment
-        camera={{ position: [0, 380, 30], fov: 25, far: 500 }}
+        // camera={{ position: [0, 380, 30], fov: 25, far: 500 }}
       >
         <Lights />
         <Suspense fallback={null}>

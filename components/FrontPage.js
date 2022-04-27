@@ -40,7 +40,7 @@ export default function FrontPage() {
 
   return (
     <div style={{ height: "70vh" }} className="relative text-white">
-      <h1 className="text-center text-xl">5 YEAR ANNIVERSARY SALE</h1>
+      {/* <h1 className="text-center text-xl">5 YEAR ANNIVERSARY SALE</h1>
       <div className="flex relative justify-center text-center ">
         <div className="flex pt-10   uppercase text-gray-900 sm:opacity-50 text-7xl sm:text-9xl">
           <div className="timer-segment flex-col flex text-center ">
@@ -63,17 +63,17 @@ export default function FrontPage() {
             <span className="label text-xl sm:text-5xl">Seconds</span>
           </div>
         </div>
-      </div>
-      <div className="justify-center text-center z-10 my-10 line">
+      </div> */}
+      <div className="justify-center text-center z-10 pt-10 line">
         <div className=" sm:pt-26 text-4xl font-mono ">
           <span>Ignite Your Dreams</span>
         </div>
-        <div className=" font-mono py-5 text-xl">
+        {/* <div className=" font-mono py-5 text-xl">
           <span>
             Be your boldest self and embrace a new world of wonder in crystal
             and color.
           </span>
-        </div>
+        </div> */}
       </div>
     </div>
   );

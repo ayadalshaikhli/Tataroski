@@ -26,14 +26,14 @@ export default function Nav() {
   return (
     <header
       style={{ backgroundColor: "#000" }}
-      className=" sticky top-0 z-20 transparent text-white colornav"
+      className=" sticky top-0 z-50 transparent text-white colornav"
     >
       <div className="shipping text-center">
         <h1>
           {free} {Good}
         </h1>
       </div>
-      <div className="flex flex-col items-center justify-between max-w-6xl pt-4 pb-2 px-4 mx-auto lg:max-w-screen-xl">
+      <div className="flex flex-col items-center justify-between max-w-6xl pt-1 pb-2 px-4 mx-auto lg:max-w-screen-xl">
         <div className="flex">
           <Link href="/" passHref>
             <a className="cursor-pointer">
